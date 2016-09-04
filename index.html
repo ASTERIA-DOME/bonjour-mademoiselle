@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<title>Bonjour! Mademoiselle</title>
+		<link rel="stylesheet" media="screen" href="/lib/normalize.css" />
+		<link rel="stylesheet" media="screen" href="/css/common.css" />
+		<link rel="stylesheet" media="screen" href="/css/index.css" />
+	</head>
+	<body>
+		<div class="intro">
+			<div class="logo">
+				<img src="./images/logo.png" class="article-img" />
+			</div>
+		</div>
+		<div class="step-gallery">
+		</div>
+		<div class="frame-gallery">
+			<div class="grid">
+			</div>
+		</div>
+		<div class="footer">
+			<div class="github">
+				<a href="" target="_blank">
+					<img src="./images/GitHub-Mark-32px.png" alt="Github" />
+				</a>
+			</div>
+			<div class="music">
+				<audio autoplay loop id="bgm">
+					<source src="./asset/Mondialito_Tunnel.mp3" type="audio/mpeg">
+				</audio>
+			</div>
+		</div>
+		<div class="popup">
+			<div class="popup-frame">
+			</div>
+		</div>
+		<script type="text/javascript" src="/bower_components/requirejs/require.js"></script>
+		<script type="text/javascript">
+			requirejs.config({
+				baseUrl : './script',
+				paths : {
+					jquery : '../lib/jquery.min',
+					handlebars : '../lib/handlebars.min',
+					lodash : '../lib/lodash.min',
+					masonry : '../lib/masonry.min',
+					imagesLoaded:'../lib/imagesloaded.pkgd.min'
+				}
+			});
+
+			require(['stepgallery.controller'],function(stepGallery){
+				stepGallery.init();
+			})
+		</script>
+	</body>
+</html>

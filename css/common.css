@@ -1,0 +1,27 @@
+html {
+  height: 100%;
+  overflow: hidden; }
+
+body {
+  height: 100%;
+  background: radial-gradient(#fff 40%, #ddd 90%, #ccc); }
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%; }
+  .footer .github {
+    position: absolute;
+    left: 10px;
+    bottom: 10px; }
+  .footer .music {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 10px;
+    bottom: 10px;
+    background-size: 100%;
+    cursor: pointer;
+    background-image: url("../images/ic_volume_up_black_24dp_2x.png"); }
+  .footer .music.stop {
+    background-image: url("../images/ic_volume_mute_black_24dp_2x.png"); }

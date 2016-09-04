@@ -1,0 +1,22 @@
+{
+  "name": "gallery",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "handlebars": "^4.0.5",
+    "requirejs": "^2.2.0",
+    "lodash": "^4.15.0",
+    "imagesloaded": "^4.1.1"
+  },
+  "devDependencies": {}
+}
