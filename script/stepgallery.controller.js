@@ -196,13 +196,15 @@ define(['stepgallery','article','jquery','masonry','imagesLoaded'],function(view
 		}
 
 		if(currentGallery == 'step'){
+			console.log(currentArticle);
 			if(gallery == 'step'){
 				if(currentArticle > article){
 					prevArticle();
+					currentArticle = article;
 				}else{
+					currentArticle = article;
 					nextArticle();
 				}
-				currentArticle = article;
 			}
 			else if(gallery == 'intro') moveBackIntro();
 			else if(gallery == 'frame') moveToFrameGallery();
@@ -279,12 +281,12 @@ define(['stepgallery','article','jquery','masonry','imagesLoaded'],function(view
 		init : function(){
 			model.init();
 
-			checkHash();
+			//checkHash();
 
 			loadArticle();
 
 			$('.intro .logo').on('click', clickIntro);
-			$stepGallery.on('click','.article.view',clickArticle);
+			$stepGallery.on('click','.article',clickArticle);
 			$(window).on('popstate',popstateListener);
 			$('.music').on('click',toggleMusic);
 			//$stepGallery.on('click','.article.view',prevArticle);

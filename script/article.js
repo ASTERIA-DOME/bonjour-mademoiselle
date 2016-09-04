@@ -7,6 +7,7 @@ define(['lodash'],function(_){
 			//articles.push(i+'.png');
 			articles.push('./images/'+i+'.png');
 		}
+		articles = _.shuffle(articles);
 	};
 
 	return {
